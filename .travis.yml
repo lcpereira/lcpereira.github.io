@@ -16,7 +16,7 @@ install:
 script:
   - npm run lint
   - npm run test
-  - ng build --prod --base-href https://lcpereira.github.io --deploy-url https://lcpereira.github.io
+  - ng build --prod --base-href https://lcpereira.github.io/ --deploy-url https://lcpereira.github.io/
   - mv dist/lcpereira/index.html dist/lcpereira/404.html
 
 after_success:
