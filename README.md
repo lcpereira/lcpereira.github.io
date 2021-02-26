@@ -1,5 +1,10 @@
 # lcpereira
 
+[![Build Status](https://travis-ci.org/lcpereira/lcpereira.github.io.svg?branch=main)](https://travis-ci.org/lcpereira/lcpereira.github.io)
+[![codecov](https://codecov.io/gh/lcpereira/lcpereira.github.io/branch/main/graph/badge.svg?token=4JRKACSYNI)](https://codecov.io/gh/lcpereira/lcpereira.github.io)
+
+[Site](https://lcpereira.github.io)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
 
 ## Development server
