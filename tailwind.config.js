@@ -1,5 +1,8 @@
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: process.argv.includes('--prod'),
+    content: ['./src/**/*.{html,ts}'],
+  },
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {},
