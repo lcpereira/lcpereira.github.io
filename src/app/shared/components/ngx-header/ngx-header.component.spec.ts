@@ -1,6 +1,7 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NgxHeaderComponent } from './ngx-header.component';
+import { NgxHeaderModule } from './ngx-header.module';
 
 describe('NgxHeaderComponent', () => {
   let component: NgxHeaderComponent;
@@ -10,6 +11,7 @@ describe('NgxHeaderComponent', () => {
     waitForAsync(() => {
       TestBed.configureTestingModule({
         declarations: [NgxHeaderComponent],
+        imports: [NgxHeaderModule],
       }).compileComponents();
     })
   );
