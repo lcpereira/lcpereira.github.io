@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Theme } from '@shared/enums/theme.enum';
 
 @Component({
   selector: 'ngx-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  theme = Theme.light;
   title = 'lcpereira';
+  themeEnum = Theme;
 }

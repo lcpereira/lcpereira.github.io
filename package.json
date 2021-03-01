@@ -29,6 +29,7 @@
     "@angular/platform-browser-dynamic": "~11.2.3",
     "@angular/router": "~11.2.3",
     "@fontsource/montserrat": "^4.2.1",
+    "@mdi/js": "^5.9.55",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -47,8 +48,8 @@
     "@commitlint/config-angular": "^12.0.0",
     "@types/jest": "^26.0.20",
     "@types/node": "^12.11.1",
-    "@typescript-eslint/eslint-plugin": "4.3.0",
-    "@typescript-eslint/parser": "4.3.0",
+    "@typescript-eslint/eslint-plugin": "4.15.2",
+    "@typescript-eslint/parser": "4.15.2",
     "codelyzer": "^6.0.0",
     "eslint": "^7.6.0",
     "eslint-plugin-import": "2.22.1",
@@ -63,8 +64,6 @@
     "protractor": "~7.0.0",
     "tailwindcss": "^2.0.3",
     "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
-    "tslint-config-prettier": "^1.18.0",
     "typescript": "~4.0.2"
   }
 }

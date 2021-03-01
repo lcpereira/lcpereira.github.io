@@ -1,0 +1,16 @@
+<div class="change-theme" [class.dark]="isDark">
+  <span [class.active]="!isDark" (click)="onChangeTheme(themeEnum.light)">
+    <ngx-mdi-icon
+      size="18px"
+      [color]="!isDark ? '#1e3246' : '#7c7c7c'"
+      [path]="sunnyIcon"
+    ></ngx-mdi-icon>
+  </span>
+  <span [class.active]="isDark" (click)="onChangeTheme(themeEnum.dark)">
+    <ngx-mdi-icon
+      size="18px"
+      [color]="isDark ? '#f5f5f5' : '#7c7c7c'"
+      [path]="nigthIcon"
+    ></ngx-mdi-icon>
+  </span>
+</div>
