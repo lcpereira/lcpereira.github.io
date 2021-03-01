@@ -1,6 +1,7 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Theme } from '@shared/enums/theme.enum';
+import { NgxMdiIconModule } from '../ngx-mdi-icon/ngx-mdi-icon.module';
 import { NgxChangeThemeComponent } from './ngx-change-theme.component';
-import { NgxChangeThemeModule } from './ngx-change-theme.module';
 
 describe('NgxChangeThemeComponent', () => {
   let component: NgxChangeThemeComponent;
@@ -10,7 +11,7 @@ describe('NgxChangeThemeComponent', () => {
     waitForAsync(() => {
       TestBed.configureTestingModule({
         declarations: [NgxChangeThemeComponent],
-        imports: [NgxChangeThemeModule],
+        imports: [NgxMdiIconModule],
       }).compileComponents();
     })
   );
@@ -23,5 +24,14 @@ describe('NgxChangeThemeComponent', () => {
 
   it('should create the app', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should change theme to dark', () => {
+    spyOn(component.changeToggle, 'emit');
+
+    component.onChangeTheme(Theme.dark);
+
+    expect(component.isDark).toEqual(true);
+    expect(component.changeToggle.emit).toBeCalledWith(true);
   });
 });

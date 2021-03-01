@@ -1,7 +1,8 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Theme } from '@shared/enums/theme.enum';
+import { NgxChangeThemeModule } from '../ngx-change-theme/ngx-change-theme.module';
 
 import { NgxHeaderComponent } from './ngx-header.component';
-import { NgxHeaderModule } from './ngx-header.module';
 
 describe('NgxHeaderComponent', () => {
   let component: NgxHeaderComponent;
@@ -11,7 +12,7 @@ describe('NgxHeaderComponent', () => {
     waitForAsync(() => {
       TestBed.configureTestingModule({
         declarations: [NgxHeaderComponent],
-        imports: [NgxHeaderModule],
+        imports: [NgxChangeThemeModule],
       }).compileComponents();
     })
   );
@@ -24,5 +25,23 @@ describe('NgxHeaderComponent', () => {
 
   it('should create the app', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('on changed theme to light', () => {
+    spyOn(component.changeTheme, 'emit');
+
+    component.onChangeTheme(false);
+
+    expect(component.theme).toEqual(Theme.light);
+    expect(component.changeTheme.emit).toBeCalledWith(Theme.light);
+  });
+
+  it('on changed theme to dark', () => {
+    spyOn(component.changeTheme, 'emit');
+
+    component.onChangeTheme(true);
+
+    expect(component.theme).toEqual(Theme.dark);
+    expect(component.changeTheme.emit).toBeCalledWith(Theme.dark);
   });
 });
