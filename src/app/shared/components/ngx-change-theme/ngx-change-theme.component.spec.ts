@@ -1,7 +1,6 @@
 import { Renderer2, Type } from '@angular/core';
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Theme } from '@shared/enums/theme.enum';
-import { NgxMdiIconModule } from '../ngx-mdi-icon/ngx-mdi-icon.module';
 import { NgxChangeThemeComponent } from './ngx-change-theme.component';
 
 describe('NgxChangeThemeComponent', () => {
@@ -13,7 +12,6 @@ describe('NgxChangeThemeComponent', () => {
     waitForAsync(() => {
       TestBed.configureTestingModule({
         declarations: [NgxChangeThemeComponent],
-        imports: [NgxMdiIconModule],
         providers: [Renderer2],
       }).compileComponents();
     })
