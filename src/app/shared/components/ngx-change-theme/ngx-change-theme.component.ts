@@ -1,5 +1,4 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { mdiWeatherNight, mdiWeatherSunny } from '@mdi/js';
 import { LocalStorageSettings } from '@shared/enums/local-storage-settings';
 import { Theme } from '@shared/enums/theme.enum';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
@@ -11,9 +10,6 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 })
 export class NgxChangeThemeComponent implements OnInit {
   theme: Theme = Theme.light;
-  themeEnum = Theme;
-  sunnyIcon = mdiWeatherSunny;
-  nigthIcon = mdiWeatherNight;
 
   constructor(private renderer: Renderer2, private localStorageService: LocalStorageService) {}
 
@@ -35,7 +31,12 @@ export class NgxChangeThemeComponent implements OnInit {
     this.onChangeTheme(this.theme);
   }
 
-  onChangeTheme(theme: Theme) {
+  onToggleTheme(): void {
+    const theme = this.isDark ? Theme.light : Theme.dark;
+    this.onChangeTheme(theme);
+  }
+
+  onChangeTheme(theme: Theme): void {
     this.theme = theme;
     this.localStorageTheme = this.theme;
 

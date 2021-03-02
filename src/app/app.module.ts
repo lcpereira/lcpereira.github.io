@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgxHeaderModule } from '@shared/components/ngx-header/ngx-header.module';
+import { AboutModule } from '@pages/about/about.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, NgxHeaderModule],
+  imports: [BrowserModule, AppRoutingModule, AboutModule],
   providers: [],
   bootstrap: [AppComponent],
 })

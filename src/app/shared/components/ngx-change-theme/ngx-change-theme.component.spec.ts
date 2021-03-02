@@ -39,7 +39,7 @@ describe('NgxChangeThemeComponent', () => {
   });
 
   it('should change theme to dark', () => {
-    spyOn(renderer, 'addClass');
+    jest.spyOn(renderer, 'addClass');
 
     component.onChangeTheme(Theme.dark);
 
@@ -48,7 +48,7 @@ describe('NgxChangeThemeComponent', () => {
   });
 
   it('should change theme to dark', () => {
-    spyOn(renderer, 'removeClass');
+    jest.spyOn(renderer, 'removeClass');
 
     component.localStorageTheme = Theme.dark;
     component.ngOnInit();
@@ -57,5 +57,26 @@ describe('NgxChangeThemeComponent', () => {
 
     expect(component.isDark).toEqual(false);
     expect(renderer.removeClass).toBeCalledWith(document.body, Theme.dark);
+  });
+
+  it('should change toggle theme to dark', () => {
+    jest.spyOn(component, 'onChangeTheme');
+
+    component.theme = Theme.light;
+    component.onToggleTheme();
+    fixture.detectChanges();
+
+    expect(component.isDark).toEqual(true);
+    expect(component.onChangeTheme).toBeCalledWith(Theme.dark);
+  });
+
+  it('should change toggle theme to light', () => {
+    jest.spyOn(component, 'onChangeTheme');
+
+    component.theme = Theme.dark;
+    component.onToggleTheme();
+
+    expect(component.isDark).toEqual(false);
+    expect(component.onChangeTheme).toBeCalledWith(Theme.light);
   });
 });
