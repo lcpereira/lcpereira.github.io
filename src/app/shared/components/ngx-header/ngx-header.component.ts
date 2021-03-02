@@ -7,16 +7,7 @@ import { Theme } from '@shared/enums/theme.enum';
   styleUrls: ['ngx-header.component.scss'],
 })
 export class NgxHeaderComponent implements OnInit {
-  @Output() changeTheme = new EventEmitter<Theme>();
-
-  theme: Theme = Theme.light;
-
   constructor() {}
 
   ngOnInit(): void {}
-
-  onChangeTheme(toggleEnabled: boolean): void {
-    this.theme = toggleEnabled ? Theme.dark : Theme.light;
-    this.changeTheme.emit(this.theme);
-  }
 }

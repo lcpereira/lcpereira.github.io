@@ -1,3 +1,4 @@
+import { Renderer2, Type } from '@angular/core';
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Theme } from '@shared/enums/theme.enum';
 import { NgxMdiIconModule } from '../ngx-mdi-icon/ngx-mdi-icon.module';
@@ -6,12 +7,14 @@ import { NgxChangeThemeComponent } from './ngx-change-theme.component';
 describe('NgxChangeThemeComponent', () => {
   let component: NgxChangeThemeComponent;
   let fixture: ComponentFixture<NgxChangeThemeComponent>;
+  let renderer: Renderer2;
 
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
         declarations: [NgxChangeThemeComponent],
         imports: [NgxMdiIconModule],
+        providers: [Renderer2],
       }).compileComponents();
     })
   );
@@ -19,6 +22,7 @@ describe('NgxChangeThemeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(NgxChangeThemeComponent);
     component = fixture.componentInstance;
+    renderer = fixture.componentRef.injector.get<Renderer2>(Renderer2 as Type<Renderer2>);
     fixture.detectChanges();
   });
 
@@ -26,12 +30,32 @@ describe('NgxChangeThemeComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should init with dark theme', () => {
+    component.localStorageTheme = Theme.dark;
+
+    component.ngOnInit();
+
+    expect(component.isDark).toEqual(true);
+  });
+
   it('should change theme to dark', () => {
-    spyOn(component.changeToggle, 'emit');
+    spyOn(renderer, 'addClass');
 
     component.onChangeTheme(Theme.dark);
 
     expect(component.isDark).toEqual(true);
-    expect(component.changeToggle.emit).toBeCalledWith(true);
+    expect(renderer.addClass).toBeCalledWith(document.body, Theme.dark);
+  });
+
+  it('should change theme to dark', () => {
+    spyOn(renderer, 'removeClass');
+
+    component.localStorageTheme = Theme.dark;
+    component.ngOnInit();
+
+    component.onChangeTheme(Theme.light);
+
+    expect(component.isDark).toEqual(false);
+    expect(renderer.removeClass).toBeCalledWith(document.body, Theme.dark);
   });
 });

@@ -1,8 +1,6 @@
-<div [class]="{ dark: theme === themeEnum.dark }">
-  <div class="bg-white dark:bg-gray-800">
-    <ngx-header (changeTheme)="theme = $event"></ngx-header>
-    <div class="content dark:text-white">
-      <router-outlet></router-outlet>
-    </div>
+<div class="bg-white dark:bg-gray-800">
+  <ngx-header></ngx-header>
+  <div class="content dark:text-white">
+    <router-outlet></router-outlet>
   </div>
 </div>

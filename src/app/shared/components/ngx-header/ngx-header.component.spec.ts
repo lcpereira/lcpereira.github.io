@@ -26,22 +26,4 @@ describe('NgxHeaderComponent', () => {
   it('should create the app', () => {
     expect(component).toBeTruthy();
   });
-
-  it('on changed theme to light', () => {
-    spyOn(component.changeTheme, 'emit');
-
-    component.onChangeTheme(false);
-
-    expect(component.theme).toEqual(Theme.light);
-    expect(component.changeTheme.emit).toBeCalledWith(Theme.light);
-  });
-
-  it('on changed theme to dark', () => {
-    spyOn(component.changeTheme, 'emit');
-
-    component.onChangeTheme(true);
-
-    expect(component.theme).toEqual(Theme.dark);
-    expect(component.changeTheme.emit).toBeCalledWith(Theme.dark);
-  });
 });
