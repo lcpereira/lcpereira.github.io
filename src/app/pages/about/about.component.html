@@ -2,7 +2,10 @@
   <div
     class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none lg:mx-0 bg-white dark:bg-gray-900"
   >
-    <div class="p-4 flex flex-row-reverse">
+    <div
+      class="px-4 md:px-8 pt-4 pb-2 flex flex-col justify-end items-end lg:items-center lg:flex-row"
+    >
+      <ngx-change-language class="mr-0.5 lg:mr-3 lg:-mt-0.5"></ngx-change-language>
       <ngx-change-theme></ngx-change-theme>
     </div>
 
@@ -22,13 +25,9 @@
       </p>
       <p class="pt-2 text-base lg:text-sm flex items-center justify-center lg:justify-start">
         <span class="mdi mdi-map-marker-radius text-xl text-purple-500 pr-2"></span>
-        <span>Joinville/SC - Brasil</span>
+        <span>{{ 'location' | transloco }}</span>
       </p>
-      <p class="pt-8 text-sm">
-        As a front-end developer and a brief stint in the Quality Assurance area, I like to program
-        focusing on code and system quality. I also venture to make some guesses in the design and
-        usability of what I deliver.
-      </p>
+      <p class="pt-6 text-sm">{{ 'description' | transloco }}</p>
 
       <div
         class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between"
@@ -38,6 +37,9 @@
         </a>
         <a class="link" href="https://linkedin.com/in/leandro9893" target="_blank">
           <span class="mdi mdi-linkedin text-3xl text-gray-600 hover:text-purple-500"></span>
+        </a>
+        <a class="link" href="mailto:lcpereira.dev@gmail.com">
+          <span class="mdi mdi-email text-3xl text-gray-600 hover:text-purple-500"></span>
         </a>
         <a class="link" href="https://instagram.com/lcpereira.dev/" target="_blank">
           <span class="mdi mdi-instagram text-3xl text-gray-600 hover:text-purple-500"></span>

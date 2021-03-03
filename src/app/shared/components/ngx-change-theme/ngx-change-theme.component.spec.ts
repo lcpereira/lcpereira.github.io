@@ -45,7 +45,7 @@ describe('NgxChangeThemeComponent', () => {
     expect(renderer.addClass).toBeCalledWith(document.body, Theme.dark);
   });
 
-  it('should change theme to dark', () => {
+  it('should change theme to light', () => {
     jest.spyOn(renderer, 'removeClass');
 
     component.localStorageTheme = Theme.dark;
@@ -62,7 +62,6 @@ describe('NgxChangeThemeComponent', () => {
 
     component.theme = Theme.light;
     component.onToggleTheme();
-    fixture.detectChanges();
 
     expect(component.isDark).toEqual(true);
     expect(component.onChangeTheme).toBeCalledWith(Theme.dark);

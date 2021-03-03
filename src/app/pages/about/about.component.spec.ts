@@ -1,5 +1,8 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NgxchangeLanguageModule } from '@shared/components/ngx-change-language/ngx-change-language.module';
 import { NgxChangeThemeModule } from '@shared/components/ngx-change-theme/ngx-change-theme.module';
+import { TranslocoRootModule } from 'src/app/transloco/transloco-root.module';
 
 import { AboutComponent } from './about.component';
 
@@ -11,7 +14,12 @@ describe('AboutComponent', () => {
     waitForAsync(() => {
       TestBed.configureTestingModule({
         declarations: [AboutComponent],
-        imports: [NgxChangeThemeModule],
+        imports: [
+          HttpClientTestingModule,
+          TranslocoRootModule,
+          NgxChangeThemeModule,
+          NgxchangeLanguageModule,
+        ],
       }).compileComponents();
     })
   );

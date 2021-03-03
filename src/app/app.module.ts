@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutModule } from '@pages/about/about.module';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco/transloco-root.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, AboutModule],
+  imports: [BrowserModule, AppRoutingModule, AboutModule, HttpClientModule, TranslocoRootModule],
   providers: [],
   bootstrap: [AppComponent],
 })
