@@ -1,6 +1,6 @@
 # lcpereira
 
-[![Build Status](https://travis-ci.com/lcpereira/lcpereira.github.io.svg?branch=main)](https://travis-ci.org/lcpereira/lcpereira.github.io)
+[![Build Status](https://travis-ci.com/lcpereira/lcpereira.github.io.svg?branch=main)](https://travis-ci.com/lcpereira/lcpereira.github.io)
 [![codecov](https://codecov.io/gh/lcpereira/lcpereira.github.io/branch/main/graph/badge.svg?token=4JRKACSYNI)](https://codecov.io/gh/lcpereira/lcpereira.github.io)
 
 [Site](https://lcpereira.github.io)
