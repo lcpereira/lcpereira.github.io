@@ -1,37 +1,36 @@
-<div class="about max-w-4xl flex items-center h-full flex-wrap mx-auto my-20 lg:my-0">
-  <div
-    class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none lg:mx-0 bg-white dark:bg-gray-900"
-  >
-    <div
-      class="px-4 md:px-8 pt-4 pb-2 flex flex-col justify-end items-end lg:items-center lg:flex-row"
-    >
-      <ngx-change-language class="mr-0.5 lg:mr-3 lg:-mt-0.5"></ngx-change-language>
+<div class="about max-w-4xl flex items-center h-full flex-wrap mx-auto">
+  <div class="w-full rounded-lg mx-0 bg-white dark:bg-gray-900">
+    <div class="px-4 md:px-8 pt-4 pb-2 flex flex-col justify-end items-end">
+      <ngx-change-language class="mr-0.5"></ngx-change-language>
       <ngx-change-theme></ngx-change-theme>
     </div>
 
-    <div class="p-4 pt-0 md:p-10 md:pt-0 text-center lg:text-left">
-      <!-- Image for mobile view-->
+    <div class="p-4 pt-0 md:p-10 md:pt-0 text-center">
+      <!-- Always use the mobile image -->
       <div
-        class="image-profile block lg:hidden rounded-full shadow-xl mx-auto -mt-32 h-48 w-48 bg-cover bg-center"
+        class="image-profile block rounded-full shadow-xl mx-auto -mt-32 h-48 w-48 bg-cover bg-center"
       ></div>
 
-      <h1 class="text-3xl font-bold pt-4 lg:pt-0">Leandro Carlos Pereira</h1>
-      <div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-purple-500 opacity-25"></div>
-      <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
+      <h1 class="text-3xl font-bold pt-4">Leandro Carlos Pereira</h1>
+      <p class="text-lg font-medium text-gray-700 dark:text-gray-300 pt-2">
+        Tech Lead | Fullstack Developer
+      </p>
+      <div class="mx-auto w-4/5 pt-3 border-b-2 border-purple-500 opacity-25"></div>
+      <p class="pt-4 font-bold flex items-center justify-center">
         <span class="mdi mdi-briefcase text-xl text-purple-500 pr-2"></span>
-        <a class="link" href="https://vizibr.com/" target="_blank">
-          <span>Vizi</span>
+        <a class="link" href="https://ze.express/" target="_blank">
+          <span>Zé Express | Ambev</span>
         </a>
       </p>
-      <p class="pt-2 text-base lg:text-sm flex items-center justify-center lg:justify-start">
+      <p class="pt-2 flex items-center justify-center">
         <span class="mdi mdi-map-marker-radius text-xl text-purple-500 pr-2"></span>
         <span>{{ 'location' | transloco }}</span>
       </p>
-      <p class="pt-6 text-sm">{{ 'description' | transloco }}</p>
+      <p class="pt-6 text-sm text-left" style="white-space: pre-line">
+        {{ 'description' | transloco }}
+      </p>
 
-      <div
-        class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between"
-      >
+      <div class="mt-6 pb-16 w-4/5 mx-auto flex flex-wrap items-center justify-between">
         <a class="link" href="https://github.com/lcpereira" target="_blank">
           <span class="mdi mdi-github text-3xl text-gray-600 hover:text-purple-500"></span>
         </a>
@@ -49,13 +48,5 @@
         </a>
       </div>
     </div>
-  </div>
-
-  <div class="w-full lg:w-2/5">
-    <!-- Big profile image for side bar (desktop) -->
-    <img
-      src="assets/profile_big.jpg"
-      class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
-    />
   </div>
 </div>
