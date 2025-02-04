@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Construir o projeto Angular
-        run: npm run build -- --output-path=dist --base-href "/lcpereira.github.io/"
+        run: npm run build -- --output-path=dist --base-href "/"
 
       - name: Implantar no GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
