@@ -391,7 +391,7 @@ class AboutComponent {
     }
 }
 AboutComponent.ɵfac = function AboutComponent_Factory(t) { return new (t || AboutComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ngneat_transloco__WEBPACK_IMPORTED_MODULE_1__["TranslocoService"])); };
-AboutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AboutComponent, selectors: [["ngx-about"]], decls: 36, vars: 7, consts: [[1, "about", "max-w-4xl", "flex", "items-center", "h-full", "flex-wrap", "mx-auto"], [1, "w-full", "rounded-lg", "mx-0", "bg-white", "dark:bg-gray-900"], [1, "px-4", "md:px-8", "pt-4", "pb-2", "flex", "flex-col", "justify-end", "items-end"], [1, "mr-0.5"], [1, "p-4", "pt-0", "md:p-10", "md:pt-0", "text-center"], [1, "image-profile", "block", "rounded-full", "shadow-xl", "mx-auto", "-mt-32", "h-48", "w-48", "bg-cover", "bg-center"], [1, "text-3xl", "font-bold", "pt-4"], [1, "text-lg", "font-medium", "text-gray-700", "dark:text-gray-300", "pt-2"], [1, "mx-auto", "w-4/5", "pt-3", "border-b-2", "border-purple-500", "opacity-25"], [1, "pt-4", "font-bold", "flex", "items-center", "justify-center"], [1, "mdi", "mdi-briefcase", "text-xl", "text-purple-500", "pr-2"], ["href", "https://ze.express/", "target", "_blank", 1, "link"], [1, "pt-2", "flex", "items-center", "justify-center"], [1, "mdi", "mdi-map-marker-radius", "text-xl", "text-purple-500", "pr-2"], [1, "pt-6", "text-sm", "text-left", 2, "white-space", "pre-line"], [1, "mt-6", "pb-16", "w-4/5", "mx-auto", "flex", "flex-wrap", "items-center", "justify-between"], ["href", "https://github.com/lcpereira", "target", "_blank", 1, "link"], [1, "mdi", "mdi-github", "text-3xl", "text-gray-600", "hover:text-purple-500"], ["href", "https://linkedin.com/in/leandro9893", "target", "_blank", 1, "link"], [1, "mdi", "mdi-linkedin", "text-3xl", "text-gray-600", "hover:text-purple-500"], ["href", "mailto:lcpereira.dev@gmail.com", 1, "link"], [1, "mdi", "mdi-email", "text-3xl", "text-gray-600", "hover:text-purple-500"], ["href", "https://instagram.com/lcpereira.dev/", "target", "_blank", 1, "link"], [1, "mdi", "mdi-instagram", "text-3xl", "text-gray-600", "hover:text-purple-500"], ["target", "_blank", 1, "link", 3, "href"], [1, "mdi", "mdi-download", "text-3xl", "text-gray-600", "hover:text-purple-500"]], template: function AboutComponent_Template(rf, ctx) { if (rf & 1) {
+AboutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AboutComponent, selectors: [["ngx-about"]], decls: 34, vars: 7, consts: [[1, "about", "max-w-4xl", "flex", "items-center", "h-full", "flex-wrap", "mx-auto"], [1, "w-full", "rounded-lg", "mx-0", "bg-white", "dark:bg-gray-900"], [1, "px-4", "md:px-8", "pt-4", "pb-2", "flex", "flex-col", "justify-end", "items-end"], [1, "mr-0.5"], [1, "p-4", "pt-0", "md:p-10", "md:pt-0", "text-center"], [1, "image-profile", "block", "rounded-full", "shadow-xl", "mx-auto", "-mt-32", "h-48", "w-48", "bg-cover", "bg-center"], [1, "text-3xl", "font-bold", "pt-4"], [1, "text-lg", "font-medium", "text-gray-700", "dark:text-gray-300", "pt-2"], [1, "mx-auto", "w-4/5", "pt-3", "border-b-2", "border-purple-500", "opacity-25"], [1, "pt-4", "font-bold", "flex", "items-center", "justify-center"], [1, "mdi", "mdi-briefcase", "text-xl", "text-purple-500", "pr-2"], ["href", "https://ze.express/", "target", "_blank", 1, "link"], [1, "ml-8"], [1, "mdi", "mdi-map-marker-radius", "text-xl", "text-purple-500", "pr-2"], [1, "pt-6", "text-sm", "text-left", 2, "white-space", "pre-line"], [1, "mt-6", "pt-2", "pb-2", "w-4/5", "mx-auto", "flex", "flex-wrap", "items-center", "justify-between"], ["href", "https://github.com/lcpereira", "target", "_blank", 1, "link"], [1, "mdi", "mdi-github", "text-3xl", "text-gray-600", "hover:text-purple-500"], ["href", "https://linkedin.com/in/leandro9893", "target", "_blank", 1, "link"], [1, "mdi", "mdi-linkedin", "text-3xl", "text-gray-600", "hover:text-purple-500"], ["href", "mailto:lcpereira.dev@gmail.com", 1, "link"], [1, "mdi", "mdi-email", "text-3xl", "text-gray-600", "hover:text-purple-500"], ["target", "_blank", 1, "link", 3, "href"], [1, "mdi", "mdi-download", "text-3xl", "text-gray-600", "hover:text-purple-500"]], template: function AboutComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -414,12 +414,12 @@ AboutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Z\u00E9 Express | Ambev");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "p", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "a", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "span", 13);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "span");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](21, "transloco");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "p", 14);
@@ -439,9 +439,6 @@ AboutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "a", 22);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](33, "span", 23);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "a", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "span", 25);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -451,7 +448,7 @@ AboutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](21, 3, "location"));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](24, 5, "description"), " ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate1"]("href", "/assets/cv/", ctx.language, "/Leandro_Carlos_Pereira.pdf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
     } }, directives: [_shared_components_ngx_change_language_ngx_change_language_component__WEBPACK_IMPORTED_MODULE_2__["NgxchangeLanguageComponent"], _shared_components_ngx_change_theme_ngx_change_theme_component__WEBPACK_IMPORTED_MODULE_3__["NgxChangeThemeComponent"]], pipes: [_ngneat_transloco__WEBPACK_IMPORTED_MODULE_1__["TranslocoPipe"]], styles: [".about[_ngcontent-%COMP%]   .image-profile[_ngcontent-%COMP%] {\n  background-image: url(\"/assets/profile.jpeg\");\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL2Fib3V0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNFO0VBQ0UsNkNBQUE7QUFBSiIsImZpbGUiOiJhYm91dC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5hYm91dCB7XG4gICYgLmltYWdlLXByb2ZpbGUge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnL2Fzc2V0cy9wcm9maWxlLmpwZWcnKVxuICB9XG59XG4iXX0= */"] });
 
