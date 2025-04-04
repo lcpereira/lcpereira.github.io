@@ -864,7 +864,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "p", 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " Tech Lead | Fullstack Developer ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " Tech Lead | Frontend | Fullstack Developer ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
