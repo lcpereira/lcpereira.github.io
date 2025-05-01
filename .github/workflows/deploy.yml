@@ -1,4 +1,4 @@
-name: Deploy Angular to GitHub Pages
+name: Deploy Next.js to GitHub Pages
 
 on:
   push:
@@ -9,26 +9,31 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do código
+      - name: 📥 Checkout do código
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js
+      - name: ⚙️ Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 12
+          node-version: 18
 
-      - name: Instalar dependências
-        run: npm install
+      - name: 📦 Instalar dependências
+        run: yarn install --frozen-lockfile
 
-      - name: Construir o projeto Angular
-        run: npm run build -- --output-path=dist --base-href "/"
+      - name: 🛠️ Build e export do Next.js
+        env:
+          NODE_ENV: production
+        run: |
+          yarn build
+          yarn export
 
-      - name: Implantar no GitHub Pages
+      - name: 🚀 Implantar no GitHub Pages
+        if: false
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist
+          folder: out
