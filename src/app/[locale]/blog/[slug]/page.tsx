@@ -4,10 +4,10 @@ import { Metadata } from 'next';
 import { getPostBySlug } from '@/lib/getPostBySlug';
 
 type Props = {
-  params: {
+  params: Promise<{
     locale: string;
     slug: string;
-  };
+  }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -6,9 +6,9 @@ import { defaultLocale } from '@/i18n';
 
 export async function GET(
   req: NextRequest,
-  context: { params: { slug: string } }
+  { params } : { params: Promise<{ slug: string }> }
 ) {
-  const { slug } = context.params;
+  const { slug } = await params;
   const locale = req.nextUrl.searchParams.get('locale') || defaultLocale;
 
   const postPath = path.join(process.cwd(), 'posts', slug, `${locale}.md`);
