@@ -1,5 +1,5 @@
 ---
-title: "Meu Primeiro Post"
+title: "Meu Primeiro Post 3"
 date: "2025-04-27"
 excerpt: "Um resumo do meu primeiro post no novo blog!"
 tags: ["nextjs", "markdown", "blog"]

@@ -6,34 +6,37 @@ import { defaultLocale } from '@/i18n';
 
 export async function GET(req: NextRequest) {
   const locale = req.nextUrl.searchParams.get('locale') || defaultLocale;
-  const postsDirectory = path.join(process.cwd(), 'posts', locale);
+  const postsRoot = path.join(process.cwd(), 'posts');
 
   try {
-    const files = await fs.readdir(postsDirectory);
+    const slugs = await fs.readdir(postsRoot);
 
     const posts = await Promise.all(
-      files
-        .filter((filename) => filename.endsWith('.md'))
-        .map(async (filename) => {
-          const filePath = path.join(postsDirectory, filename);
+      slugs.map(async (slug) => {
+        const filePath = path.join(postsRoot, slug, `${locale}.md`);
+        try {
           const fileContent = await fs.readFile(filePath, 'utf8');
           const { data } = matter(fileContent);
 
           return {
-            slug: filename.replace('.md', ''),
+            slug,
             title: data.title,
             excerpt: data.excerpt,
             date: data.date,
             tags: data.tags || [],
           };
-        })
+        } catch {
+          return null;
+        }
+      })
     );
 
-    posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+    const validPosts = posts.filter(Boolean);
 
-    return NextResponse.json(posts);
-  } catch (err) {
-    console.error('❌ Failed to load posts:', err);
+    validPosts.sort((a, b) => new Date(b!.date).getTime() - new Date(a!.date).getTime());
+
+    return NextResponse.json(validPosts);
+  } catch {
     return NextResponse.json({ message: 'Failed to load posts.' }, { status: 500 });
   }
 }

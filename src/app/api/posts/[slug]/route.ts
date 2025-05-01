@@ -6,11 +6,12 @@ import { defaultLocale } from '@/i18n';
 
 export async function GET(
   req: NextRequest,
-  context: { params: Promise<{ slug: string }> }
+  context: { params: { slug: string } }
 ) {
-  const { slug } = await context.params;
+  const { slug } = context.params;
   const locale = req.nextUrl.searchParams.get('locale') || defaultLocale;
-  const postPath = path.join(process.cwd(), 'posts', locale, `${slug}.md`);
+
+  const postPath = path.join(process.cwd(), 'posts', slug, `${locale}.md`);
 
   try {
     const file = await fs.readFile(postPath, 'utf8');
@@ -26,11 +27,8 @@ export async function GET(
       },
       content,
     });
-  } catch (error) {
-    console.error('Error reading post file:', error);
-    return NextResponse.json(
-      { message: 'Post not found.' },
-      { status: 404 }
-    );
+  } catch {
+    console.error('❌ Post not found:', postPath);
+    return NextResponse.json({ message: 'Post not found.' }, { status: 404 });
   }
 }
