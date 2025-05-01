@@ -29,11 +29,3 @@ jobs:
           NODE_ENV: production
         run: |
           yarn build
-          yarn export
-
-      - name: 🚀 Implantar no GitHub Pages
-        if: false
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: out
