@@ -13,32 +13,51 @@ const config = {
       },
       colors: {
         primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+          50: '#f5f3ff',
+          100: '#ede9fe',
+          200: '#ddd6fe',
+          300: '#c4b5fd',
+          400: '#a78bfa',
+          500: '#8b5cf6',
+          600: '#7c3aed',
+          700: '#6d28d9',
+          800: '#543DB6',
+          900: '#3C2B8A',
         },
         dark: {
-          900: '#111827',
+          50: '#f5f5f5',
+          100: '#e5e5e5',
+          200: '#d4d4d4',
+          300: '#a3a3a3',
+          400: '#737373',
+          500: '#525252',
+          600: '#404040',
+          700: '#2f2f2f',
+          800: '#1f1f1f',
+          900: '#17161D',
         },
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
             color: theme('colors.dark.900'),
-            a: { color: theme('colors.primary.600') },
+            a: {
+              color: theme('colors.primary.700'),
+              '&:hover': {
+                color: theme('colors.primary.800'),
+              },
+            },
           },
         },
         dark: {
           css: {
-            color: theme('colors.gray.300'),
-            a: { color: theme('colors.primary.400') },
+            color: theme('colors.dark.100'),
+            a: {
+              color: theme('colors.primary.300'),
+              '&:hover': {
+                color: theme('colors.primary.200'),
+              },
+            },
           },
         },
       }),

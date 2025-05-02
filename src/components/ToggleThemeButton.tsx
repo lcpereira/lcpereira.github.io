@@ -1,6 +1,6 @@
 'use client';
 
-import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
+import { Icon } from '@iconify/react';
 import useTheme from '@/hooks/useTheme';
 
 export default function ToggleThemeButton() {
@@ -13,9 +13,9 @@ export default function ToggleThemeButton() {
       title={theme === 'dark' ? 'Modo claro' : 'Modo escuro'}
     >
       {theme === 'dark' ? (
-        <SunIcon className="w-5 h-5 text-yellow-400" />
+        <Icon icon="mdi:weather-sunny" className="w-5 h-5 text-yellow-400" />
       ) : (
-        <MoonIcon className="w-5 h-5 text-gray-700" />
+        <Icon icon="mdi:weather-night" className="w-5 h-5 text-gray-700" />
       )}
     </button>
   );
