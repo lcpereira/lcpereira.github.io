@@ -15,8 +15,8 @@ export default function AboutSection() {
       <h2 className="text-3xl font-bold mb-6 text-dark-900 dark:text-white">Sobre mim</h2>
       
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Sou desenvolvedor de software com mais de 12 anos de experiência, tendo começado na área de qualidade e evoluído para um perfil sênior de desenvolvimento. 
-        Ao longo da minha jornada, participei de projetos desafiadores em empresas de diferentes portes, sempre com foco em criar soluções eficientes e escaláveis.
+      Sou desenvolvedor de software com mais de 13 anos de experiência, tendo iniciado na área de qualidade e evoluído para um perfil técnico sênior. 
+      Ao longo da minha trajetória, atuei em projetos desafiadores em empresas de diversos portes, sempre com foco em criar soluções modernas, eficientes e escaláveis.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">

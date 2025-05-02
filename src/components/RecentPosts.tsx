@@ -9,8 +9,10 @@ export default function RecentPosts({ posts }: { posts: Post[] }) {
   const locale = useLocale();
 
   return (
-    <section className="bg-primary-600 dark:bg-dark-700 text-white py-8 px-4 rounded-2xl">
-      <h2 className="text-3xl font-bold mb-5 text-center">Blog</h2>
+    <section className="mb-16">
+      <h2 className="text-3xl font-bold text-dark-900 dark:text-white mb-5">
+        Blog
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {posts.map((post) => (
@@ -18,7 +20,7 @@ export default function RecentPosts({ posts }: { posts: Post[] }) {
             key={post.slug}
             href={`/${locale}/blog/${post.slug}`}
             prefetch={false}
-            className="bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-md group transition transform hover:scale-[1.02]"
+            className="bg-primary-100 dark:bg-dark-800 rounded-2xl overflow-hidden shadow-md group transition transform hover:scale-[1.02] border border-gray-200 dark:border-dark-700"
           >
             <div className="relative h-48 w-full">
               <Image
@@ -51,7 +53,7 @@ export default function RecentPosts({ posts }: { posts: Post[] }) {
       <div className="text-center mt-10">
         <Link
           href={`/${locale}/blog`}
-          className="inline-block px-5 py-2 bg-white text-primary-600 font-semibold rounded-md transition hover:bg-gray-100"
+          className="ml-2 bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-md transition-colors text-sm font-medium"
         >
           Ver todos os posts
         </Link>

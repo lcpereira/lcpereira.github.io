@@ -14,7 +14,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     <div className="flex flex-col min-h-screen transition-colors duration-300 bg-white dark:bg-dark-900 text-dark-900 dark:text-gray-100">
       <header className="py-4">
         <div className="container mx-auto flex justify-between items-center px-4">
-          <Link href={`/${locale}/`} className="text-2xl font-bold">
+          <Link href={`/${locale}/`} className="text-lg font-bold">
             LCPEREIRA.DEV
           </Link>
 
