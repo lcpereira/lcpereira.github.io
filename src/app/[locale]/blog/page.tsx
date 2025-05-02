@@ -3,11 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export default async function BlogPage({ params }: Props) {
-  const { locale } = params;
+  const { locale } = await params;
   const posts = await getPosts(locale);
 
   return (
