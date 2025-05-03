@@ -19,7 +19,6 @@ export default function Layout({ children }: { children: ReactNode }) {
             lcpereira.dev
           </Link>
 
-          {/* Botão hambúrguer no mobile */}
           <button
             className="md:hidden p-2"
             onClick={() => setIsOpen(!isOpen)}
@@ -32,7 +31,6 @@ export default function Layout({ children }: { children: ReactNode }) {
             )}
           </button>
 
-          {/* Menu Desktop */}
           <nav className="hidden md:flex items-center gap-2">
             <Link href={`/${locale}/`} className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Home</Link>
             <Link href={`/${locale}/blog`} className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Blog</Link>
@@ -41,7 +39,6 @@ export default function Layout({ children }: { children: ReactNode }) {
           </nav>
         </div>
 
-        {/* Menu Mobile */}
         {isOpen && (
           <nav className="md:hidden px-4 mt-2 flex flex-col gap-2">
             <Link href={`/${locale}/`} className="block p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Home</Link>
