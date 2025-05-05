@@ -1,7 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypePrism from 'rehype-prism-plus';
-import CopyButton from '@/components/CopyButton';
 
 type PostContentProps = {
   title: string;
@@ -47,15 +46,11 @@ export default function PostContent({ title, date, content }: PostContentProps) 
               />
             ),
             code: ({ children, ...props }) => {
-              const codeString = String(children).trim();
 
               return (
-                <div className="relative">
-                    <code {...props} className="whitespace-pre-wrap">
-                        {children}
-                    </code>
-                    <CopyButton text={codeString} />
-                </div>
+                <code {...props} className="whitespace-pre-wrap">
+                    {children}
+                </code>
               );
             },
             h1: ({ ...props }) => (

@@ -1,11 +1,13 @@
 {
   "name": "Leandro Carlos Pereira",
   "short_name": "Leandro",
-  "description": "Site pessoal de Leandro Carlos Pereira — Tech Lead, Frontend e Fullstack Developer. Compartilhando experiências em tecnologia, desenvolvimento e liderança.",
+  "description": "Software Developer focused on creating efficient, modern, and scalable solutions. Sharing experiences in technology, development, and leadership.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#0ea5e9",
+  "theme_color": "#7c3aed",
+  "orientation": "portrait",
+  "lang": "en-US",
   "icons": [
     {
       "src": "/favicon.ico",
@@ -22,8 +24,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "lang": "pt-BR",
-  "orientation": "portrait"
+  ]
 }
-  

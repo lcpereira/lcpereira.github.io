@@ -2,15 +2,14 @@ import { NextRequest, NextResponse } from 'next/server';
 import path from 'path';
 import fs from 'fs/promises';
 import matter from 'gray-matter';
-import { defaultLocale } from '@/i18n';
+import { routing } from '@/i18n/routing';
 
 export async function GET(
   req: NextRequest,
   { params } : { params: Promise<{ slug: string }> }
 ) {
   const { slug } = await params;
-  const locale = req.nextUrl.searchParams.get('locale') || defaultLocale;
-
+  const locale = req.nextUrl.searchParams.get('locale') || routing.defaultLocale;
   const postPath = path.join(process.cwd(), 'posts', slug, `${locale}.md`);
 
   try {

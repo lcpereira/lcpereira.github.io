@@ -1,17 +1,23 @@
 'use client';
 
 import { useLocale } from '@/hooks/useLocale';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
 
-export default function RecentPosts({ posts }: { posts: Post[] }) {
+type Props = {
+  posts: Post[];
+};
+
+export default function RecentPosts({ posts }: Props) {
   const locale = useLocale();
+  const t = useTranslations('recentPosts');
 
   return (
     <section className="mb-16">
       <h2 className="text-3xl font-bold text-dark-900 dark:text-white mb-5">
-        Blog
+        {t('title')}
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -36,7 +42,9 @@ export default function RecentPosts({ posts }: { posts: Post[] }) {
             </div>
 
             <div className="p-5 text-dark-900 dark:text-white">
-              <h3 className="text-lg font-bold mb-2 group-hover:underline">{post.title}</h3>
+              <h3 className="text-lg font-bold mb-2 group-hover:underline">
+                {post.title}
+              </h3>
               <p className="text-sm mb-3">{post.excerpt}</p>
               <p className="text-sm font-medium">
                 {new Date(post.date).toLocaleDateString(locale, {
@@ -55,7 +63,7 @@ export default function RecentPosts({ posts }: { posts: Post[] }) {
           href={`/${locale}/blog`}
           className="ml-2 bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-md transition-colors text-sm font-medium"
         >
-          Ver todos os posts
+          {t('seeAll')}
         </Link>
       </div>
     </section>

@@ -1,0 +1,55 @@
+{
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I’m a software developer with over 12 years of experience, having started in quality assurance and evolved into building modern, scalable systems. Throughout my journey, I’ve taken part in challenging projects at companies of all sizes, contributing to frontend, backend, and at times, infrastructure.",
+    "paragraph2": "I have solid experience with technologies like JavaScript, TypeScript, React, React Native, Angular, Node.js, NestJS, and Java, along with practical knowledge of SQL and NoSQL databases. I've also worked with CI/CD tools, Docker, and AWS services, supporting application stability and continuous delivery.",
+    "paragraph3": "Currently, I’m expanding my knowledge in Flutter and conversational English, while developing personal projects focused on learning and innovation.",
+    "paragraph4": "I enjoy learning, teaching, and building with quality.",
+    "timelineTitle": "Timeline",
+    "timeline": {
+      "2012": "Started in software quality at TOTVS, building a solid foundation in development best practices.",
+      "2015": "Transitioned to frontend development, becoming a technical reference in the team with a focus on Angular and modern technologies.",
+      "2020": "Expanded into backend with Node.js, NestJS, and Java, aiming for a more complete and fullstack role.",
+      "2021": "Worked on mobile projects with React Native and served as a Tech Lead at Zé Express (Ambev), driving product evolution, architecture, and best practices."
+    }
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "description": "Software Developer focused on creating efficient, modern, and scalable solutions.",
+    "imageAlt": "Photo of Leandro Carlos Pereira",
+    "downloadCV": "Download CV"
+  },
+  "layout": {
+    "siteName": "lcpereira.dev",
+    "nav": {
+      "home": "Home",
+      "blog": "Blog"
+    },
+    "footer": {
+      "text": "© {year} Leandro Carlos Pereira — All rights reserved."
+    },
+    "menu": {
+      "open": "Open menu",
+      "close": "Close menu"
+    }
+  },
+  "recentPosts": {
+    "title": "Blog",
+    "seeAll": "See all posts"
+  },
+  "skills": {
+    "title": "Skills",
+    "web": "Web",
+    "mobile": "Mobile",
+    "backend": "Backend",
+    "devops": "DevOps & Cloud",
+    "database": "Database",
+    "learning": "Learning",
+    "showExtras": "Show more",
+    "hideExtras": "Hide extras"
+  },
+  "post": {
+    "notFoundTitle": "Post not found",
+    "notFoundDescription": "Sorry, we couldn’t find the requested post."
+  }
+}

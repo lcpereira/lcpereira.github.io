@@ -1,0 +1,55 @@
+{
+  "about": {
+    "title": "Sobre mim",
+    "paragraph1": "Sou desenvolvedor de software com mais de 12 anos de experiência, tendo iniciado na área de qualidade e evoluído para atuar com profundidade no desenvolvimento de sistemas modernos e escaláveis. Ao longo da minha jornada, participei de projetos desafiadores em empresas de diversos tamanhos, assumindo responsabilidades no front-end, back-end e, em alguns momentos, na infraestrutura.",
+    "paragraph2": "Tenho experiência sólida com tecnologias como JavaScript, TypeScript, React, React Native, Angular, Node.js, NestJS e Java, além de conhecimento prático com bancos de dados SQL e NoSQL. Também já atuei com ferramentas de CI/CD, Docker e serviços AWS, contribuindo para a estabilidade e entrega contínua das aplicações.",
+    "paragraph3": "Atualmente, continuo expandindo meu conhecimento em Flutter e no inglês para conversação, enquanto desenvolvo projetos próprios com foco em aprendizado e inovação.",
+    "paragraph4": "Gosto de aprender, ensinar e construir com qualidade.",
+    "timelineTitle": "Linha do tempo",
+    "timeline": {
+      "2012": "Início na área de qualidade de software na TOTVS, onde desenvolvi uma base sólida em boas práticas de desenvolvimento.",
+      "2015": "Transição para desenvolvimento front-end, tornando-me referência técnica na equipe com foco em Angular e tecnologias modernas.",
+      "2020": "Expansão para back-end com Node.js, NestJS e Java, buscando uma atuação mais completa e fullstack.",
+      "2021": "Atuação em projetos mobile com React Native e liderança técnica no Zé Express (Ambev), contribuindo com evolução de produto, arquitetura e boas práticas."
+    }
+  },
+  "hero": {
+    "greeting": "Olá, sou",
+    "description": "Desenvolvedor de Software focado em criar soluções eficientes, modernas e escaláveis.",
+    "imageAlt": "Foto de Leandro Carlos Pereira",
+    "downloadCV": "Baixar CV"
+  },
+  "layout": {
+    "siteName": "lcpereira.dev",
+    "nav": {
+      "home": "Home",
+      "blog": "Blog"
+    },
+    "footer": {
+      "text": "© {year} Leandro Carlos Pereira — Todos os direitos reservados."
+    },
+    "menu": {
+      "open": "Abrir menu",
+      "close": "Fechar menu"
+    }
+  },
+  "recentPosts": {
+    "title": "Blog",
+    "seeAll": "Ver todos os posts"
+  },
+  "skills": {
+    "title": "Conhecimentos",
+    "web": "Web",
+    "mobile": "Mobile",
+    "backend": "Back-end",
+    "devops": "DevOps & Cloud",
+    "database": "Banco de Dados",
+    "learning": "Estudos",
+    "showExtras": "Ver mais",
+    "hideExtras": "Ocultar adicionais"
+  },
+  "post": {
+    "notFoundTitle": "Post não encontrado",
+    "notFoundDescription": "Desculpe, não conseguimos encontrar o post solicitado."
+  }
+}

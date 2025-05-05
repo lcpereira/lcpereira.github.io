@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { defaultLocale } from '@/i18n';
 import { getPostsStatic } from '@/lib/getPostsStatic';
+import { routing } from '@/i18n/routing';
 
 export async function GET(req: NextRequest) {
   try {
-    const locale = req.nextUrl.searchParams.get('locale') || defaultLocale;
+    const locale = req.nextUrl.searchParams.get('locale') || routing.defaultLocale;
     const posts = await getPostsStatic(locale);
     return NextResponse.json(posts);
   } catch {

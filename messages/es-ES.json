@@ -1,0 +1,55 @@
+{
+    "about": {
+        "title": "Sobre mí",
+        "paragraph1": "Soy desarrollador de software con más de 12 años de experiencia. Comencé en el área de calidad y evolucioné para trabajar en profundidad en el desarrollo de sistemas modernos y escalables. A lo largo de mi trayectoria, participé en proyectos desafiantes en empresas de diferentes tamaños, asumiendo responsabilidades en frontend, backend y, en algunos momentos, infraestructura.",
+        "paragraph2": "Tengo sólida experiencia con tecnologías como JavaScript, TypeScript, React, React Native, Angular, Node.js, NestJS y Java, además de conocimientos prácticos en bases de datos SQL y NoSQL. También he trabajado con herramientas de CI/CD, Docker y servicios de AWS, contribuyendo a la estabilidad y entrega continua de las aplicaciones.",
+        "paragraph3": "Actualmente, sigo ampliando mis conocimientos en Flutter y en inglés conversacional, mientras desarrollo proyectos propios enfocados en el aprendizaje y la innovación.",
+        "paragraph4": "Me gusta aprender, enseñar y construir con calidad.",
+        "timelineTitle": "Línea del tiempo",
+        "timeline": {
+            "2012": "Inicio en el área de calidad de software en TOTVS, donde desarrollé una base sólida en buenas prácticas de desarrollo.",
+            "2015": "Transición al desarrollo frontend, convirtiéndome en una referencia técnica en el equipo con enfoque en Angular y tecnologías modernas.",
+            "2020": "Expansión al backend con Node.js, NestJS y Java, buscando un papel más completo y fullstack.",
+            "2021": "Participación en proyectos móviles con React Native y liderazgo técnico en Zé Express (Ambev), contribuyendo a la evolución del producto, arquitectura y buenas prácticas."
+        }
+    },
+    "hero": {
+        "greeting": "Hola, soy",
+        "description": "Desarrollador de software enfocado en crear soluciones eficientes, modernas y escalables.",
+        "imageAlt": "Foto de Leandro Carlos Pereira",
+        "downloadCV": "Descargar CV"
+    },
+    "layout": {
+        "siteName": "lcpereira.dev",
+        "nav": {
+            "home": "Inicio",
+            "blog": "Blog"
+        },
+        "footer": {
+            "text": "© {year} Leandro Carlos Pereira — Todos los derechos reservados."
+        },
+        "menu": {
+            "open": "Abrir menú",
+            "close": "Cerrar menú"
+        }
+    },
+    "recentPosts": {
+        "title": "Blog",
+        "seeAll": "Ver todas las publicaciones"
+    },
+    "skills": {
+        "title": "Conocimientos",
+        "web": "Web",
+        "mobile": "Móvil",
+        "backend": "Backend",
+        "devops": "DevOps y Nube",
+        "database": "Base de Datos",
+        "learning": "Aprendizaje",
+        "showExtras": "Ver más",
+        "hideExtras": "Ocultar adicionales"
+    },
+    "post": {
+        "notFoundTitle": "Publicación no encontrada",
+        "notFoundDescription": "Lo sentimos, no pudimos encontrar la publicación solicitada."
+    }
+}

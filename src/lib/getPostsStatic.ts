@@ -1,9 +1,9 @@
 import path from 'path';
 import fs from 'fs/promises';
 import matter from 'gray-matter';
-import { defaultLocale } from '@/i18n';
+import { routing } from '@/i18n/routing';
 
-export async function getPostsStatic(locale: string = defaultLocale) {
+export async function getPostsStatic(locale: string = routing.defaultLocale) {
   const postsRoot = path.join(process.cwd(), 'posts');
 
   const slugs = await fs.readdir(postsRoot);
