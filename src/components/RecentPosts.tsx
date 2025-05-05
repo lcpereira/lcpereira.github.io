@@ -24,7 +24,8 @@ export default function RecentPosts({ posts }: Props) {
         {posts.map((post) => (
           <Link
             key={post.slug}
-            href={`/${locale}/blog/${post.slug}`}
+            href={`/blog/${post.slug}`}
+            locale={locale}
             prefetch={false}
             className="bg-primary-100 dark:bg-dark-800 rounded-2xl overflow-hidden shadow-md group transition transform hover:scale-[1.02] border border-gray-200 dark:border-dark-700"
           >
@@ -60,7 +61,8 @@ export default function RecentPosts({ posts }: Props) {
 
       <div className="text-center mt-10">
         <Link
-          href={`/${locale}/blog`}
+          href="/blog"
+          locale={locale}
           className="ml-2 bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-md transition-colors text-sm font-medium"
         >
           {t('seeAll')}
