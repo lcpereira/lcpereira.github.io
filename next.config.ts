@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   headers: async () => {
     return Promise.resolve([
       {
-        source: '/_next/static/(.*)',
+        source: '/(.*)',
         headers: [
           {
             key: 'Cache-Control',

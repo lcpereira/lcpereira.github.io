@@ -3,7 +3,7 @@ import { getPostsStatic } from '@/lib/getPostsStatic';
 
 const supportedLocales = ['pt-BR', 'en-US', 'es-ES'];
 
-export const revalidate = 3600;
+export const revalidate = 600;
 
 export async function GET() {
   const siteUrl = getSiteUrl();
@@ -35,7 +35,6 @@ export async function GET() {
   return new Response(sitemap, {
     headers: {
       'Content-Type': 'application/xml',
-      'Cache-Control': 'public, max-age=3600, stale-while-revalidate=59',
     },
   });
 }
