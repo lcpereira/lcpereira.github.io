@@ -1,6 +1,6 @@
 import HeroSection from '@/components/HeroSection';
 import RecentPosts from '@/components/RecentPosts';
-// import { getPosts } from '@/lib/getPosts';
+import { getPosts } from '@/lib/getPosts';
 import AboutSection from '@/components/AboutSection';
 import SkillsSection from '@/components/SkillsSection';
 
@@ -10,8 +10,8 @@ type Props = {
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
-  console.log(locale);
-  // const posts = await getPosts(locale);
+  const posts = await getPosts(locale);
+  console.log(posts);
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
