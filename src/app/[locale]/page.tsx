@@ -1,8 +1,10 @@
-import HeroSection from '@/components/HeroSection';
-import RecentPosts from '@/components/RecentPosts';
+import dynamic from 'next/dynamic';
 import { getPosts } from '@/lib/getPosts';
-import AboutSection from '@/components/AboutSection';
-import SkillsSection from '@/components/SkillsSection';
+
+const HeroSection = dynamic(() => import('@/components/HeroSection'));
+const AboutSection = dynamic(() => import('@/components/AboutSection'));
+const SkillsSection = dynamic(() => import('@/components/SkillsSection'));
+const RecentPosts = dynamic(() => import('@/components/RecentPosts'));
 
 type Props = {
   params: Promise<{ locale: string }>;
