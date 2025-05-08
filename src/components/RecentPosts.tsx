@@ -43,19 +43,19 @@ export default function RecentPosts({ posts }: Props) {
               <Icon icon={arrowTopRightIcon} className="w-4 h-4" />
             </div>
 
-            {/* <div className="p-5 text-dark-900 dark:text-white">
+            <div className="p-5 text-dark-900 dark:text-white">
               <h3 className="text-lg font-bold mb-2 group-hover:underline">
                 {post.title}
               </h3>
               <p className="text-sm mb-3">{post.excerpt}</p>
-              <p className="text-sm font-medium">
+              {/* <p className="text-sm font-medium">
                 {new Date(post.date).toLocaleDateString(locale, {
                   day: 'numeric',
                   month: 'long',
                   year: 'numeric',
                 })}
-              </p>
-            </div> */}
+              </p> */}
+            </div>
           </Link>
         ))}
       </div>
