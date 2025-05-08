@@ -87,9 +87,9 @@ export default function Layout({ children }: { children: ReactNode }) {
 
       <main className="flex-1 container mx-auto px-4 py-8">{children}</main>
 
-      <footer className="text-gray-600 dark:text-gray-400 text-center py-6 text-sm">
+      {/* <footer className="text-gray-600 dark:text-gray-400 text-center py-6 text-sm">
         {t('footer.text', { year: new Date().getFullYear() })}
-      </footer>
+      </footer> */}
     </div>
   );
 }

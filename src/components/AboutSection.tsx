@@ -10,7 +10,7 @@ export default function AboutSection() {
     { year: '2012', text: t('timeline.2012') },
     { year: '2015', text: t('timeline.2015') },
     { year: '2020', text: t('timeline.2020') },
-    { year: `2021 - ${new Date().getFullYear()}`, text: t('timeline.2021') },
+    { year: `2021 - 2025`, text: t('timeline.2021') },
   ];
 
   return (
