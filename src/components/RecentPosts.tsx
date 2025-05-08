@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
 import arrowTopRightIcon from '@iconify-icons/mdi/arrow-top-right';
-import { LocalizedDate } from './LocalizedDate';
 
 type Props = {
   posts: Post[];
@@ -49,9 +48,7 @@ export default function RecentPosts({ posts }: Props) {
                   {post.title}
                 </h3>
                 <p className="text-sm mb-3">{post.excerpt}</p>
-                <p className="text-sm font-medium">
-                  <LocalizedDate date={post.date} locale={locale} />
-                </p>
+                <p className="text-sm font-medium">{post.date}</p>
               </div>
             </Link>
           )

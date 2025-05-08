@@ -13,12 +13,17 @@ export async function getPostsStatic(locale: string = routing.defaultLocale) {
       try {
         const fileContent = await fs.readFile(filePath, 'utf8');
         const { data } = matter(fileContent);
+        const formattedDate = new Date(data.date).toLocaleDateString(locale, {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+        });
 
         return {
           slug,
           title: data.title,
           excerpt: data.excerpt,
-          date: data.date,
+          date: formattedDate,
           tags: data.tags || [],
         };
       } catch {

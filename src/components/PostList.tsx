@@ -27,7 +27,7 @@ export default function PostList({ posts }: PostListProps) {
               <h2 className="text-2xl font-semibold hover:underline">{post.title}</h2>
             </Link>
             <p className="text-gray-600 mt-2">{post.excerpt}</p>
-            <small className="text-gray-400">{new Date(post.date).toLocaleDateString('pt-BR')}</small>
+            <small className="text-gray-400">{post.date}</small>
           </li>
         ))}
       </ul>

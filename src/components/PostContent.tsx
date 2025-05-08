@@ -26,11 +26,7 @@ export default function PostContent({ title, date, content }: PostContentProps) 
           itemProp="datePublished"
           content={date}
         >
-          {new Date(date).toLocaleDateString('pt-BR', {
-            day: '2-digit',
-            month: 'long',
-            year: 'numeric',
-          })}
+          {date}
         </p>
       </header>
 

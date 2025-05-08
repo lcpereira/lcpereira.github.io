@@ -15,13 +15,18 @@ export async function GET(
   try {
     const file = await fs.readFile(postPath, 'utf8');
     const { data, content } = matter(file);
+    const formattedDate = new Date(data.date).toLocaleDateString(locale, {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    });
 
     return NextResponse.json({
       data: {
         slug,
         title: data.title,
         excerpt: data.excerpt,
-        date: data.date,
+        date: formattedDate,
         tags: data.tags || [],
       },
       content,

@@ -39,13 +39,7 @@ export default async function BlogPage({ params }: Props) {
               </p>
             </div>
 
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-              {new Date(post.date).toLocaleDateString(locale, {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric',
-              })}
-            </p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">{post.date}</p>
           </div>
         </Link>
       ))}
