@@ -1,5 +1,5 @@
 import HeroSection from '@/components/HeroSection';
-// import RecentPosts from '@/components/RecentPosts';
+import RecentPosts from '@/components/RecentPosts';
 // import { getPosts } from '@/lib/getPosts';
 import AboutSection from '@/components/AboutSection';
 import SkillsSection from '@/components/SkillsSection';
@@ -18,7 +18,7 @@ export default async function HomePage({ params }: Props) {
       <HeroSection />
         <AboutSection />
         <SkillsSection />
-        {/* <RecentPosts posts={posts.slice(0, 3)} /> */}
+        <RecentPosts posts={[]} />
     </main>
   );
 }
