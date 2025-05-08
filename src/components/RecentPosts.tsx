@@ -48,13 +48,13 @@ export default function RecentPosts({ posts }: Props) {
                 {post.title}
               </h3>
               <p className="text-sm mb-3">{post.excerpt}</p>
-              {/* <p className="text-sm font-medium">
+              <p className="text-sm font-medium">
                 {new Date(post.date).toLocaleDateString(locale, {
                   day: 'numeric',
                   month: 'long',
                   year: 'numeric',
                 })}
-              </p> */}
+              </p>
             </div>
           </Link>
         ))}
