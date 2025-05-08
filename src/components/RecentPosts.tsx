@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
+import arrowTopRightIcon from '@iconify-icons/mdi/arrow-top-right';
 
 type Props = {
   posts: Post[];
@@ -39,7 +40,7 @@ export default function RecentPosts({ posts }: Props) {
             </div>
 
             <div className="absolute top-4 right-4 bg-primary-600 text-white rounded-full p-2">
-              <Icon icon="mdi:arrow-top-right" className="w-4 h-4" />
+              <Icon icon={arrowTopRightIcon} className="w-4 h-4" />
             </div>
 
             <div className="p-5 text-dark-900 dark:text-white">

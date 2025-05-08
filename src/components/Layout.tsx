@@ -6,6 +6,8 @@ import { useLocale } from '@/hooks/useLocale';
 import SelectLocale from './SelectLocale';
 import ToggleThemeButton from './ToggleThemeButton';
 import { Icon } from '@iconify/react';
+import closeIcon from '@iconify-icons/mdi/close';
+import menuIcon from '@iconify-icons/mdi/menu';
 import { useTranslations } from 'next-intl';
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -31,9 +33,9 @@ export default function Layout({ children }: { children: ReactNode }) {
             aria-label={isOpen ? t('menu.close') : t('menu.open')}
           >
             {isOpen ? (
-              <Icon icon="mdi:close" className="w-6 h-6 text-gray-800 dark:text-gray-200" />
+              <Icon icon={closeIcon} className="w-6 h-6 text-gray-800 dark:text-gray-200" />
             ) : (
-              <Icon icon="mdi:menu" className="w-6 h-6 text-gray-800 dark:text-gray-200" />
+              <Icon icon={menuIcon} className="w-6 h-6 text-gray-800 dark:text-gray-200" />
             )}
           </button>
 

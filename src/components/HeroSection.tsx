@@ -4,6 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Icon } from '@iconify/react';
+import githubIcon from '@iconify-icons/mdi/github';
+import linkedinIcon from '@iconify-icons/mdi/linkedin';
+import emailOutlineIcon from '@iconify-icons/mdi/email-outline';
 import { useLocale } from '@/hooks/useLocale';
 import { useTranslations } from 'next-intl';
 
@@ -11,17 +14,17 @@ const socialLinks = [
   {
     href: 'https://github.com/lcpereira',
     label: 'GitHub',
-    icon: 'mdi:github',
+    icon: githubIcon,
   },
   {
     href: 'https://linkedin.com/in/leandro9893',
     label: 'LinkedIn',
-    icon: 'mdi:linkedin',
+    icon: linkedinIcon,
   },
   {
     href: 'mailto:lcpereira.dev@gmail.com',
     label: 'Email',
-    icon: 'mdi:email-outline',
+    icon: emailOutlineIcon,
   },
 ];
 
