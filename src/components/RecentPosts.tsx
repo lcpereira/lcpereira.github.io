@@ -15,6 +15,7 @@ type Props = {
 export default function RecentPosts({ posts }: Props) {
   const locale = useLocale();
   const currentLocale = locale || routing.defaultLocale;
+  console.log(locale, posts[0].date)
   const t = useTranslations('recentPosts');
 
   return (
@@ -66,7 +67,7 @@ export default function RecentPosts({ posts }: Props) {
         <Link
           href="/blog"
           prefetch={true}
-          locale={locale}
+          locale={currentLocale}
           className="ml-2 bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-md transition-colors text-sm font-medium"
         >
           {t('seeAll')}
