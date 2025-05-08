@@ -58,7 +58,7 @@ export default function SkillsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-xl p-6 shadow-sm"
+            className="bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-md p-6 shadow-sm"
           >
             <h3 className="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-4">
               {t(key)}

@@ -71,7 +71,7 @@ export default function LocaleDropdown() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -4 }}
             transition={{ duration: 0.15 }}
-            className="absolute z-10 mt-2 w-full bg-white dark:bg-dark-900 border border-gray-300 dark:border-gray-600 rounded-md shadow-md text-sm overflow-hidden origin-top"
+            className="absolute z-10 mt-2 w-full bg-white dark:bg-dark-900 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm overflow-hidden origin-top"
           >
             {locales.map((loc) => (
               <li

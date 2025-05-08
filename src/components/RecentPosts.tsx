@@ -26,8 +26,8 @@ export default function RecentPosts({ posts }: Props) {
             key={post.slug}
             href={`/blog/${post.slug}`}
             locale={locale}
-            prefetch={false}
-            className="bg-primary-100 dark:bg-dark-800 rounded-2xl overflow-hidden shadow-md group transition transform hover:scale-[1.02] border border-gray-200 dark:border-dark-700"
+            prefetch={true}
+            className="bg-primary-100 dark:bg-dark-800 rounded-md overflow-hidden shadow-sm group transition transform hover:scale-[1.02] border border-gray-200 dark:border-dark-700"
           >
             <div className="relative h-48 w-full">
               <Image
@@ -62,6 +62,7 @@ export default function RecentPosts({ posts }: Props) {
       <div className="text-center mt-10">
         <Link
           href="/blog"
+          prefetch={true}
           locale={locale}
           className="ml-2 bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-md transition-colors text-sm font-medium"
         >

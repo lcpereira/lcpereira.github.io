@@ -1,9 +1,9 @@
 import { notFound } from 'next/navigation';
 import Layout from '@/components/Layout';
-
 import '@/styles/globals.css';
 import '@/styles/prism.css';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 
 type Props = {
@@ -14,9 +14,9 @@ type Props = {
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
 
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
+  if (!hasLocale(routing.locales, locale)) notFound();
+
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -46,8 +46,8 @@ export default async function RootLayout({ children, params }: Props) {
           }}
         />
       </head>
-      <body suppressHydrationWarning>
-        <NextIntlClientProvider>
+      <body>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Layout>{children}</Layout>
         </NextIntlClientProvider>
       </body>

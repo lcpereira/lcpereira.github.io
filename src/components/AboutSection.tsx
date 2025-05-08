@@ -26,12 +26,12 @@ export default function AboutSection() {
         {t('title')}
       </h2>
 
-      {[1, 2, 3, 4].map((i) => (
+      {Array.from({ length: 4 }, (_, i) => (
         <p
           key={i}
           className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4"
         >
-          {t(`paragraph${i}`)}
+          {t(`paragraph${i + 1}`)}
         </p>
       ))}
 
@@ -40,7 +40,7 @@ export default function AboutSection() {
           {t('timelineTitle')}
         </h3>
 
-        <ul className="space-y-3 border-l border-gray-300 dark:border-gray-600 pl-4">
+        <ul className="space-y-3 border-l border-gray-300 dark:border-gray-600 pl-4" aria-label={t('timelineTitle')}>
           {timeline.map(({ year, text }) => (
             <li key={year}>
               <span className="block text-sm text-gray-500 dark:text-gray-400">{year}</span>

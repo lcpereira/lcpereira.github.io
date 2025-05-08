@@ -17,7 +17,11 @@ export default function Layout({ children }: { children: ReactNode }) {
     <div className="flex flex-col min-h-screen transition-colors duration-300 bg-white dark:bg-dark-900 text-dark-900 dark:text-gray-100">
       <header className="py-4">
         <div className="container mx-auto flex justify-between items-center px-4">
-          <Link href="/" locale={locale} className="logo text-lg font-bold">
+          <Link
+            prefetch={true}
+            href="/"
+            locale={locale} className="logo text-lg font-bold"
+          >
             {t('siteName')}
           </Link>
 
@@ -35,6 +39,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 
           <nav className="hidden md:flex items-center gap-2">
             <Link
+              prefetch={true}
               href="/"
               locale={locale}
               className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -42,6 +47,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               {t('nav.home')}
             </Link>
             <Link
+              prefetch={true}
               href="/blog"
               locale={locale}
               className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -56,6 +62,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         {isOpen && (
           <nav className="md:hidden px-4 mt-2 flex flex-col gap-2">
             <Link
+              prefetch={true}
               href="/"
               locale={locale}
               className="block p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -63,6 +70,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               {t('nav.home')}
             </Link>
             <Link
+              prefetch={true}
               href="/blog"
               locale={locale}
               className="block p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"

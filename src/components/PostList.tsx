@@ -23,7 +23,7 @@ export default function PostList({ posts }: PostListProps) {
       <ul className="space-y-8">
         {posts.map((post) => (
           <li key={post.slug} className="border-b pb-4">
-            <Link href={`/blog/${post.slug}`} locale={locale}>
+            <Link prefetch={true} href={`/blog/${post.slug}`} locale={locale}>
               <h2 className="text-2xl font-semibold hover:underline">{post.title}</h2>
             </Link>
             <p className="text-gray-600 mt-2">{post.excerpt}</p>

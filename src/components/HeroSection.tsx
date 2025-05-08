@@ -7,6 +7,24 @@ import { Icon } from '@iconify/react';
 import { useLocale } from '@/hooks/useLocale';
 import { useTranslations } from 'next-intl';
 
+const socialLinks = [
+  {
+    href: 'https://github.com/lcpereira',
+    label: 'GitHub',
+    icon: 'mdi:github',
+  },
+  {
+    href: 'https://linkedin.com/in/leandro9893',
+    label: 'LinkedIn',
+    icon: 'mdi:linkedin',
+  },
+  {
+    href: 'mailto:lcpereira.dev@gmail.com',
+    label: 'Email',
+    icon: 'mdi:email-outline',
+  },
+];
+
 export default function HeroSection() {
   const locale = useLocale();
   const t = useTranslations('hero');
@@ -35,8 +53,10 @@ export default function HeroSection() {
           alt={t('imageAlt')}
           width={400}
           height={400}
-          className="object-cover w-full h-auto rounded-md shadow-lg"
+          className="object-cover w-full h-auto rounded-md shadow-sm"
           priority
+          quality={80}
+          sizes="(max-width: 640px) 100vw, 280px"
         />
       </motion.div>
 
@@ -58,15 +78,11 @@ export default function HeroSection() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 mt-6">
-          <Link href="https://github.com/lcpereira" target="_blank" aria-label="GitHub">
-            <Icon icon="mdi:github" className="w-6 h-6 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" />
-          </Link>
-          <Link href="https://linkedin.com/in/leandro9893" target="_blank" aria-label="LinkedIn">
-            <Icon icon="mdi:linkedin" className="w-6 h-6 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" />
-          </Link>
-          <Link href="mailto:lcpereira.dev@gmail.com" aria-label="Email">
-            <Icon icon="mdi:email-outline" className="w-6 h-6 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" />
-          </Link>
+          {socialLinks.map(({ href, label, icon }) => (
+            <Link key={label} href={href} target="_blank" aria-label={label}>
+              <Icon icon={icon} className="w-6 h-6 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" />
+            </Link>
+          ))}
 
           <a
             target="_blank"

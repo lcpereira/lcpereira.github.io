@@ -17,7 +17,8 @@ export default async function BlogPage({ params }: Props) {
           key={post.slug}
           href={`/blog/${post.slug}`}
           locale={locale}
-          className="flex flex-col md:flex-row bg-primary-100 dark:bg-dark-800 rounded-xl overflow-hidden shadow hover:shadow-md transition border border-gray-200 dark:border-dark-700"
+          prefetch={true}
+          className="flex flex-col md:flex-row bg-primary-100 dark:bg-dark-800 rounded-md overflow-hidden shadow hover:shadow-md transition border border-gray-200 dark:border-dark-700"
         >
           <div className="relative w-full md:w-1/3 h-48 md:h-auto">
             <Image
