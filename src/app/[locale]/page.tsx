@@ -11,14 +11,13 @@ type Props = {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   const posts = await getPosts(locale);
-  console.log(posts);
 
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
       <HeroSection />
         <AboutSection />
         <SkillsSection />
-        <RecentPosts posts={[]} />
+        <RecentPosts posts={posts.slice(0, 3)} />
     </main>
   );
 }
