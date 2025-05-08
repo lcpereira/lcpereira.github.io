@@ -21,3 +21,5 @@ export default async function HomePage({ params }: Props) {
     </main>
   );
 }
+
+export const revalidate = 600;

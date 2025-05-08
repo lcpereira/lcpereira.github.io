@@ -109,3 +109,5 @@ export default async function RootLayout({ children, params }: Props) {
     </html>
   );
 }
+
+export const revalidate = 600;

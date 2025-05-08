@@ -46,3 +46,5 @@ export default async function BlogPage({ params }: Props) {
     </section>
   );
 }
+
+export const revalidate = 600;
