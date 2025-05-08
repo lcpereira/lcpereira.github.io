@@ -3,7 +3,7 @@
 import { useLocale } from '@/hooks/useLocale';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { Icon } from '@iconify/react';
 import arrowTopRightIcon from '@iconify-icons/mdi/arrow-top-right';
 
@@ -30,20 +30,20 @@ export default function RecentPosts({ posts }: Props) {
             prefetch={true}
             className="bg-primary-100 dark:bg-dark-800 rounded-md overflow-hidden shadow-sm group transition transform hover:scale-[1.02] border border-gray-200 dark:border-dark-700"
           >
-            <div className="relative h-48 w-full">
+            {/* <div className="relative h-48 w-full">
               <Image
                 src={`/posts/${post.slug}.png`}
                 alt={post.title}
                 fill
                 className="object-cover"
               />
-            </div>
+            </div> */}
 
             <div className="absolute top-4 right-4 bg-primary-600 text-white rounded-full p-2">
               <Icon icon={arrowTopRightIcon} className="w-4 h-4" />
             </div>
 
-            <div className="p-5 text-dark-900 dark:text-white">
+            {/* <div className="p-5 text-dark-900 dark:text-white">
               <h3 className="text-lg font-bold mb-2 group-hover:underline">
                 {post.title}
               </h3>
@@ -55,7 +55,7 @@ export default function RecentPosts({ posts }: Props) {
                   year: 'numeric',
                 })}
               </p>
-            </div>
+            </div> */}
           </Link>
         ))}
       </div>
