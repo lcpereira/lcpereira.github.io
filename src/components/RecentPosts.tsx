@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
 import arrowTopRightIcon from '@iconify-icons/mdi/arrow-top-right';
+import { LocalizedDate } from './LocalizedDate';
 
 type Props = {
   posts: Post[];
@@ -13,7 +14,6 @@ type Props = {
 
 export default function RecentPosts({ posts }: Props) {
   const locale = useLocale();
-  console.log(locale, posts[0].date)
   const t = useTranslations('recentPosts');
 
   return (
@@ -23,14 +23,7 @@ export default function RecentPosts({ posts }: Props) {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {posts.map((post) => {
-          const formattedDate = new Date(post.date).toLocaleDateString(locale, {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric',
-          });
-
-          return (
+        {posts.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
@@ -56,11 +49,13 @@ export default function RecentPosts({ posts }: Props) {
                   {post.title}
                 </h3>
                 <p className="text-sm mb-3">{post.excerpt}</p>
-                <p className="text-sm font-medium">{formattedDate}</p>
+                <p className="text-sm font-medium">
+                  <LocalizedDate date={post.date} locale={locale} />
+                </p>
               </div>
             </Link>
           )
-        })}
+        )}
       </div>
 
       <div className="text-center mt-10">
