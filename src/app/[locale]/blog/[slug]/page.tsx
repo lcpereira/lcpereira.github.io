@@ -69,5 +69,3 @@ export default async function PostPage({ params }: Props) {
     );
   }
 }
-
-export const revalidate = 600;
