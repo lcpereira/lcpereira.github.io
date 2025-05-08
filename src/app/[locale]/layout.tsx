@@ -67,8 +67,7 @@ export async function generateMetadata({
   };
 }
 
-export const revalidate = 600;
-export const fetchCache = 'default-cache';
+export const dynamic = 'force-static';
 
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
